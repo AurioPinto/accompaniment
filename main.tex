@@ -1,0 +1,214 @@
+\documentclass[lighthipster]{hipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.3\textwidth}
+\setlength{\rightcolwidth}{0.65\textwidth}
+
+%------------------------------------------------------------------
+\title{Hipster-CV}
+\author{\LaTeX{} Ninja}
+\date{March 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+
+
+\header{\bg{headerfontbox}{headerfontboxfont}{Technologist} }{\bgupper{headerfontbox}{headerfontboxfont}{\bfseries\Huge Aurio Pinto}}{\bg{headerfontbox}{headerfontboxfont}}{west1.jpg}{headerblue}{3.5cm}{2cm}
+
+
+
+%------------------------------------------------
+
+% hier muss die "unsichtbare" Überschrift rein, weil er sonst nicht die Paracols startet... komisch...
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.3}[0.65]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\bgupper{cvgreen}{white}{Facts} \\
+\bg{cvgreen}{white}{personal} \\
+
+\begin{tabular}{ll}
+\faMale& Aurio Pinto \\
+\faGlobe& nationality: Angolan  \\
+\faBirthdayCake&1994 \\
+\faMapMarker&Shanghai \\
+\end{tabular}
+
+\bigskip
+
+\bg{cvgreen}{white}{Areas of specialization} \\
+
+IT ~•~ STEM ~•~ Engineering 
+
+\bigskip
+
+\bgupper{cvgreen}{white}{Skills} \\
+\bg{cvgreen}{white}{Languages}
+\bigskip
+
+
+\begin{minipage}[t]{\leftcolwidth}
+\begin{tabular}{l | ll}
+\textbf{English} & C2 & {\phantom{x}\footnotesize Fluent} \\
+\textbf{Portuguese}& & {\phantom{x}\footnotesize Native}\\
+\textbf{Chinese} & HSK5 & \pictofraction{\faCircle}{cvgreen}{4}{black!10}{0}{\tiny}\\
+\end{tabular}
+\end{minipage}
+
+\bigskip
+
+\bg{cvgreen}{white}{Interests}\\
+
+\bubblediagram{{\textbf{Machine} \\\textbf{learning}},  APIs, Algorithm, Linux, Python, Photography, Linguistic, \textbf{Computer}\\ \textbf{Vision}}
+
+\hspace{3cm} \color{labelcolour}{OS:} \hspace{0.5em}\icon{\faWindows}{labelcolour}{\Large} \hspace{0.5em} \icon{\faLinux}{labelcolour}{\Large} 
+\bigskip
+
+\bg{cvgreen}{white}{IT \& programming} \\
+
+\begin{minipage}[t]{0.3\textwidth}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{html, css} &  \barrule{0.55}{0.5em}{cvgreen}\\
+     \bg{skilllabelcolour}{iconcolour}{\LaTeX} & \barrule{0.55}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{SQL} & \barrule{0.49}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{python} & \barrule{0.55}{0.5em}{cvgreen} \\
+    %  \bg{skilllabelcolour}{iconcolour}{C} & \barrule{0.50}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{javascript} & \barrule{0.55}{0.5em}{cvgreen} \\
+\end{tabular}
+
+
+%\dashrule{}{}
+\end{minipage}
+
+
+\bigskip
+
+\scalebox{0.8}{
+\iconcross{\Huge}{white}{cvred}{\color{black!30}\faBook}{\href{mailto:the.latex.ninja@gmail.com}{\faEnvelopeO}}{\faPhone}{\faCode}
+}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Short Resume}
+
+\begin{tabular}{r| p{0.4\textwidth} c}
+    \cvevent{2016--Present}{Tongji University (CEIE)}{China}{Shanghai\color{cvred}}{Communication Engineering.}{tongji.png} \\
+    \cvevent{2014-2016}{International School, tongji}{China}{Shanghai \color{cvred}}{Chinese language program}{tongji.png} \\
+    \cvevent{2009--2012}{itel/ Inatel}{Brasil}{Rio Janeiro \color{cvred}}{Focus on Telecomunication}{itel.jpg}
+\end{tabular}
+
+\vspace{4em}
+
+\begin{minipage}[t]{0.4\textwidth}
+\section*{Certificates}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{2017}{CS50}{Certified}{Harvard Uni \color{headerblue}}{}{cs50.png} \\
+    \cvdegree{2018}{Computer Vision and Image Analysis}{Certified}{Microsoft \color{headerblue}}{}{microsoft.png} \\
+    \cvdegree{1720}{Deep Learning Specialization}{Certified}{deepleaning.ai \color{headerblue}}{}{deeplearning.png}
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.16\textwidth}
+\section*{Hobbies}
+% usage \hobbyicon{<fontawesome icon}{Text}{background color of circle}{size of icon}{space text below icon}
+\hobbyicon{\color{iconcolour}\faFlask}{Chess}{cvgreen}{\iconsize}{2em} \hfill
+\hobbyicon{\color{iconcolour}\faBook}{The Code}{cvorange}{\iconsize}{2em}
+
+\hobbyicon{\color{iconcolour}\faComment}{Chat}{cvpurple}{\iconsize}{2em} \hspace{1em}
+\hobbyicon{\color{iconcolour}\faBeer}{Wine}{headerblue}{\iconsize}{2em}
+\end{minipage}
+
+\vspace{4em}
+
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Research Interests}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+    Present & Computer Vision \\
+    Present & Machine Learning \\
+    2017--Present & Python
+\end{tabular}
+\bigskip
+
+\section*{Strenghts}
+\cvtag{honest}
+\cvtag{thieving}
+\cvtag{Inquisitive}
+\bigskip
+
+\section*{References}
+\cvkeyword{Jose Augusto}{cvgreen}{iconcolour}
+\cvkeyword{Andy Lu}{cvgreen}{iconcolour} \\
+
+\cvkeyword{possibly Ms. A.Erfort}{headerblue}{iconcolour}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Projects}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+    Present & {Digital Image Processing} \\
+    Present & ``Gravitation app'', in: \emph{Dorahacks hackathon} (Beijing).
+\end{tabular}
+\bigskip
+
+\section*{Talks & Thoughts}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
+    Daily & `` if you want to keep your home a pure and happy place, it’s best to keep the gory details far away from it.”
+\end{tabular}
+\end{minipage}
+
+
+
+
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Aurio Pinto \icon{\faEnvelopeO}{cvpurple}{} The Black Pearl \icon{\faMapMarker}{cvpurple}{} Shanghai \icon{\faPhone}{cvpurple}{} 086/ 187 1789 7971 \newline\icon{\faAt}{cvpurple}{} \protect\url{auriopinto.com.cn}
+}
+\end{center}
+\end{minipage}
+
+
+\end{paracol}
+
+\end{document}
