@@ -1,0 +1,169 @@
+%--------------------------------------------------------------------------------------------------%
+%   Version:    1.0
+%   Last Mod:   20170307    
+%         By:   Juan Medina juancamilomedina1989@gmail.com
+%   Author:     Juan Medina juancamilomedina1989@gmail.com
+%--------------------------------------------------------------------------------------------------%
+
+%-------------------------------------------- PREAMBLE --------------------------------------------%
+\documentclass[12pt]{report}
+\usepackage[a4paper,width=150mm,headheight=110pt,top=25mm,bottom=25mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{pgffor} 
+\usepackage{xeCJK}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\usepackage{subfig}
+\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{graphics} 
+\usepackage{fancyhdr}
+
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small Aurio Pinto}
+\fancyhead[RE,LO]{\small Wireless Communication System}
+\fancyfoot[CE,CO]{\small \leftmark}
+\fancyfoot[LE,RO]{\small \thepage}
+ 
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+ 
+% \begin{document}
+ 
+% \chapter{Using different page styles}
+% \pagestyle{fancy}
+% \fancyhf{}
+% \rhead{Aurio Pinto}
+% \lhead{Wireless Communication Systems}
+% \fancyfoot[CE,CO]{\leftmark}
+% % \fancyfoot[LE,RO]{\thepage}
+% % \rfoot{\centering\thepage}
+
+\graphicspath{{Images/}}
+
+\usepackage[round, numbers,authoryear]{natbib}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+
+\definecolor{mycolor}{RGB}{30,75,180}
+\definecolor{mycolor2}{RGB}{40,75,90}
+% Lund colors
+\definecolor{LUGreen}{RGB}{173,202,184}
+\definecolor{LUPink}{RGB}{233,196,199}
+\definecolor{LUBlue}{RGB}{0,0,128}
+\definecolor{LUBronze}{RGB}{156,97,20}
+\definecolor{LUblue}{RGB}{185,211,220}
+\definecolor{LUGrey}{RGB}{77,76,68}
+
+\usepackage[colorlinks = true,
+            linkcolor = mycolor,
+            urlcolor  = mycolor,
+            citecolor = mycolor,
+            anchorcolor = mycolor]{hyperref}
+
+\usepackage[hypcap=true,font={small,it}]{caption}
+
+\captionsetup{belowskip=2pt,aboveskip=2pt}
+\bibliographystyle{abbrvnat}
+
+\renewcommand{\chaptername}{}
+
+\renewcommand{\figureautorefname}{figure} % lower case default ref
+\renewcommand{\tableautorefname}{table} % lower case default ref
+\newcommand{\latex}{\LaTeX\xspace}
+\newcommand{\mcite}[1]{\textcolor{mycolor}{\citeauthor{#1} (\citeyear{#1})}}
+\newcommand{\hcite}[1]{(\textcolor{mycolor}{\citeauthor{#1}, \citeyear{#1}})}
+%----------------------------------------------------------------------------------------------------%
+
+%--------------------------------------------- DOCUMENT ---------------------------------------------%
+\begin{document}
+%\fancyhead[RO,LE]{}
+
+% Title page
+    \input{Sections/Title}
+
+% Optional Chapters
+
+    %\chapter*{Dedication}
+    %\chapter*{Declaration}
+    \chapter*{Acknowledgements}
+    \textcolor{black}{I would like to express my great appreciation to Professor Yin Xuefeng, Vice Dean of the College of Electronic and Information Engineering for his consistent guidance and encouragement. I would like to thank him for his valuable feedback during his course on 5G technology.}\\
+    
+    \textcolor{black}{In addition, I wish to record my deep gratitude to a number of my classmates who have taken time out of their busy schedule to help translate a few sections of the course. As Mandarin is not my native language, my classmates continued to ensure I was able to work to my full potential without a language barrier.}\\
+    
+%   \textcolor{black}{Lastly I would like to thank my dear friend,  Zhu Dongzhe(Benzema) for his continued support throughout the whole project.}\\
+   
+   \textcolor{black}{Special thanks go to all the people who believed in me along the way.}
+    
+
+% Table of contents, list of figures, and list of tables
+    {\hypersetup{linkcolor=black}
+        \tableofcontents
+        \listoffigures
+        % \listoftables
+    }
+        {\hypersetup{linkcolor=mycolor}}
+    
+% Introduction
+    \chapter{Introduction} 
+    \input{Sections/Introduction}
+     
+% Theory
+    \chapter{A key technology towards 5G}
+    \input{Sections/Theory}
+    \figureautorefname
+    
+    
+% Data
+    \chapter{Perspective of Investment}
+    \section{Smart Cities}
+    \input{Sections/Data}
+    
+% Methods
+    \chapter{Cases for Potential Use of 5G}
+    % \subsubsection{Imagining the mobile services of the next decade}
+    \input{Sections/Methods}
+    
+% Empirical Analysis
+    \chapter{5 Empirical Analysis}
+    \input{Sections/EmpiricalAnalysis}
+    
+% Conclusion
+    \chapter{Conclusion}
+    \input{Sections/Conclusion}
+    
+% Bibliography
+    \phantomsection
+    \addcontentsline{toc}{chapter}{References}%
+    \bibliography{bibliography}
+    
+    \vspace{2.0cm}
+    \textcolor{black}{The 5G technology Argument \href{https://carrier.huawei.com/en/spotlight/5g}{referencing guidelines} in the Teaching and Learning platform. \url{https://carrier.huawei.com/en/spotlight/5g}}\\
+  \item  Outlook: Visions and research directions for the Wireless World,
+    WWRF, Oct 2011
+    \item 5G Vision: The 5G Infrastructure Public Private Partnership: the next generation of
+communication networks and services. From The 5G Infrastructure Public Private Partnership\href{https://5g-ppp.eu/wp-content/uploads/2015/02/5G-Vision-Brochure-v1.pdf}
+    % Harvard referencing style '(Author, Year)'  and 'Author (Year)'
+    % The template has an automated bibliography section based on references 
+    % consistent with entries in the 'bibliography.bib' file 
+
+% Appendices
+    % \appendix
+    % \chapter{(Appendix A title)}
+    % \input{Sections/Appendix_A}
+    
+    %  \chapter{(Appendix B title)}
+    % \input{Sections/Appendix_B}
+
+\end{document}
+%----------------------------------------------------------------------------------------------------%
